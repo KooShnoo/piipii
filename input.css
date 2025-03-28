@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+html, #main {@apply h-full w-full }
+
+body {
+    @apply h-full w-full p-8  bg-stone-900 text-white
+}
+
+input[type=file]::file-selector-button, input[type=file]::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+@theme {
+    --breakpoint-xs: 25rem;
+}

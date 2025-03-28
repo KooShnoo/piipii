@@ -1,0 +1,35 @@
+[package]
+name = "piipii"
+version = "0.1.0"
+authors = ["KooShnoo <ishan.kpv@gmail.com>"]
+edition = "2021"
+
+[package.metadata.docs.rs]
+homepage = "https://piipii.pages.dev/docs"
+
+[dependencies]
+bitfield = "0.19.0"
+byteorder = "1.5.0"
+dioxus = { version = "0.6.0", features = ["router"] }
+num_enum = "0.7.3"
+phf = "0.11.3"
+sha1 = "0.10.6"
+web-sys = "0.3.77"
+
+[features]
+default = ["web"]
+web = ["dioxus/web"]
+desktop = ["dioxus/desktop"]
+mobile = ["dioxus/mobile"]
+
+[profile]
+
+[profile.wasm-dev]
+inherits = "dev"
+opt-level = 1
+
+[profile.server-dev]
+inherits = "dev"
+
+[profile.android-dev]
+inherits = "dev"
